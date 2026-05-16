@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyeongJun (MJ) Kim | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --bg-body: #ebedef;
+            --bg-card: #ffffff;
+            --text-main: #2c3e50;
+            --text-sub: #546e7a;
+        }
+
+        body {
+            font-family: 'Times New Roman', 'Malgun Gothic', serif;
+            margin: 0; padding: 0; line-height: 1.6;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; }
+        header p { margin: 10px 0 0; font-size: 1.2rem; opacity: 0.9; }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 50px;
+            padding: 0 20px;
+        }
+
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .tab-button {
+            padding: 15px 30px;
+            border: none;
+            background: #d1d8e0;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--text-main);
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: var(--bg-card);
+            color: var(--accent-color);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .tab-content, .list-section {
+            background: var(--bg-card);
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            /* 섹션 사이의 간격을 일정하게 조절 */
+            margin-bottom: 20px; 
+            border-radius: 8px;
+        }
+
+        /* 탭 바로 아래 붙는 콘텐츠는 위쪽 모서리 둥글기 제거 */
+        .tab-content {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .year {
+            min-width: 130px;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.05rem;
+        }
+
+        .job-details {
+            padding-left: 20px;
+            border-left: 1px solid #eee;
+            width: 100%;
+        }
+
+        .job-details strong { font-size: 1.2rem; display: block; margin-bottom: 5px; }
+
+        .sub-points {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            color: var(--text-sub);
+        }
+
+        .skill-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            background: #f8f9fa;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #dee2e6;
+        }
+
+        footer { text-align: center; padding: 40px 0; color: #7f8c8d; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .timeline-item { flex-direction: column; }
+            .job-details { border-left: none; padding-left: 0; padding-top: 10px; border-top: 1px solid #eee; }
+            .year { margin-bottom: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Na Hyun Kim</h1>
+    <p>Support Services Specialist | Contracting Officer Represenative (COR)</p>
+    <div style="margin-top:15px; font-size: 1rem; opacity: 0.8;">
+        nahyun71774@gmail.com | Pyeongtaek-si, Gyeonggi-do, Republic of Korea
+    </div>
+</header>
+
+<div class="container">
+    <div class="tab-menu">
+        <button class="tab-button active" onclick="openTab(event, 'about_ko')">자기소개 (KR)</button>
+        <button class="tab-button" onclick="openTab(event, 'about_en')">About Me (EN)</button>
+    </div>
+
+    <div id="about_ko" class="tab-content">
+        <h2>요약</h2>
+        <p><strong>주한미군 민간인 인사 시스템을 능숙하게 다루며 채용, 기구 개편, 근태 관리를 총괄했습니다.</strong>  미 육군 및 주한미군 규정(AR 672-20, USFKI 1400.01)에 대한 깊은 이해를 바탕으로 지휘부에 정확한 규정 해석과 가이드라인을 제공하는 SME 역할을 수행했습니다. 8년 이상 핵심 행정 및 군수/인사 직무를 성공적으로 수행해 온 준비된 인재입니다 미육군 민간인 공로훈장 (Civilian Achievement Medal) 수상 경력을 보유하고 있습니다.
+특히 까다로운 민원 해결과 부서 간 조율에 특화된 고도화된 고객 서비스 역량을 갖추고 있습니다.</p>
+        <p><strong>예산 관리, 계약 감독(COR/ACOR), 대규모 순환 배치(KRF)</strong>에 따른 인력 운영 계획 수립 등 복잡하고 유동적인 조직 환경에서도 안정적인 행정 서비스를 유지하는 강력한 통제력을 입증했습니다. 경영학 석사(MBA) 학위를 보유하여 조직 관리 및 직무 분류(Classification) 업무를 거시적인 관점에서 전략적으로 수행할 수 있습니다.</p>
+    </div>
+
+    <div id="about_en" class="tab-content" style="display:none;">
+        <h2>Professional Summary</h2>  
+        <p><strong>Possesses hands-on technical proficiency in key civilian personnel systems, including DCPDS, CPOL, and AutoNOA.</strong> Demonstrated Subject Matter Expert (SME) capability by interpreting and applying complex federal and military personnel regulations (such as AR 672-20 and USFKI 1400.01) to guide leadership teams. Experienced in optimizing manpower utilization and managing crews for major operational workflows (such as Korea Rotational Forces). Proficient in tracking personnel lifecycle status and managing automated timekeeping networks (KTAM) to ensure absolute payroll integrity. Formally recognized for superior performance and strict dedication to the mission, earning 2x Civilian Achievement Medals and 5x Performance Awards for Excellence.</p>
+    </div>
+
+    <section class="list-section">
+        <h2>Work Experience</h2>
+        <div class="timeline-item">
+            <div class="year">2020 - Present</div>
+            <div class="job-details">
+                <strong>Support Services Specialist (COR)</strong>
+                <span style="color: var(--text-sub); display: block; font-size: 0.9rem;">Eighth US Army Non-commissioned Officer Academy</span>
+                <ul class="sub-points">
+                    <li>Strategic HR Advisory & Regulatory Guidance</li>
+                    <li>Full-Lifecycle Personnel & Systems Management</li>
+                    <li>Program Administration & Operational Readiness</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2018 - 2020</div>
+            <div class="job-details">
+                <strong>Marine Cargo Specialist</strong>
+                <span style="color: var(--text-sub); display: block; font-size: 0.9rem;">US Army 837th Transportation Battalion</span>
+                <ul class="sub-points">
+                    <li>Strategic Workforce Planning & Staffing Coordination</li>
+                    <li>Record Management</li>
+                    <li>Systems Administration & Payroll Integrity</li>
+                    <li>Cross-Functional Liaison & Program Compliance</li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2017 - 2018</div>
+            <div class="job-details">
+                <strong>Fire Communication Operator</strong>
+                <span style="color: var(--text-sub); display: block; font-size: 0.9rem;">Area IV US Army Fire Protection Branch</span>
+                <ul class="sub-points">
+                    <li>High-Tempo Personnel Coordination & Accountability</li>
+                    <li>Multinational Liaison & Strategic Communication</li>
+                    <li>Administrative Oversight & Internal Controls</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-section">
+        <h2>Awards & Recognition</h2>
+        <div class="timeline-item">
+            <div class="year">Distinction</div>
+            <div class="job-details">
+                <strong>Department of the Army Civilian Achievement Medal x 2</strong>
+                <p style="color: var(--text-sub); margin-top: 5px; font-size: 0.95rem;">
+                    Recognized for sustained excellence and significant contributions to the mission success of the U.S. Army.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-section">
+        <h2>Expertise & Certificates</h2>
+        <div class="skill-container">
+            <div class="skill-tag">Microsoft Office Specialist (Master Level)</div>
+            <div class="skill-tag">Force Management Course (Residence - US Army))</div>
+            <div class="skill-tag">Civilian Education System (Foundation Level)</div>
+            <div class="skill-tag">Power BI</div>
+        </div>
+        <ul style="margin-top: 25px; line-height: 2; color: var(--text-sub); font-size: 0.95rem;">
+            <li><strong>US Army Contracting Officer Represenative (COR)</strong></li>
+            <li><strong>US Army Government Purchase Card (GPC) Program Manager</strong></li> 
+            <li><strong>US Army Government Travel Credit Card Reviewing Officer</strong> (GTCC RO)</li>
+        </ul>
+    </section>
+
+    <section class="list-section">
+        <h2>Education</h2>
+        <div style="margin-bottom: 15px;">
+            <strong>Kyeongbuk National University</strong><br>
+            <span style="color: var(--text-sub);">Master of Business Administration (MBA)</span>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <strong>Seoul Digital University</strong><br>
+            <span style="color: var(--text-sub);">Bachelor of Arts in Accounting</span>
+        </div>
+        <div>
+            <strong>Taegu Science College</strong><br>
+            <span style="color: var(--text-sub);">Associate's Degree in Computer Science</span>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Nahyun Kim. All Rights Reserved.
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
